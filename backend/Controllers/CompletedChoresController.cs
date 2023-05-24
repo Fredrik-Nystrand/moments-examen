@@ -1,5 +1,6 @@
 ﻿using backend.Data;
 using backend.Models.Chore.CompletedChore;
+using backend.Models.Utilities;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -11,17 +12,31 @@ public class CompletedChoresController : ControllerBase
 {
     private readonly DataContext _context;
     private CompletedChoreEntity _entity;
+    private IConfiguration _config;
 
-    public CompletedChoresController(DataContext context)
+    public CompletedChoresController(DataContext context, IConfiguration config)
     {
         _context = context;
         _entity = new();
+        _config = config;
     }
 
     [HttpPost]
     public async Task<IActionResult> Create(CompletedChoreRequest request)
     {
-        return await _entity.Create(_context, _entity, request);
+        var token = HttpContext.Request.Headers["Authorization"].FirstOrDefault()?.Split(" ").Last();
+        TokenHandler _tokenHandler = new(token, _config);
+
+        if (_tokenHandler.UserValidated)
+        {
+
+            return await _entity.Create(_context, _entity, request);
+        }
+        else
+        {
+            return Unauthorized();
+        }
+
     }
 
     [HttpGet("{id}")]

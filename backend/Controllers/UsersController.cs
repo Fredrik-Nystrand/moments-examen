@@ -39,7 +39,7 @@ public class UsersController : ControllerBase
     }
 
     [HttpGet("{id}")]
-    public async Task<IActionResult> GetAll(int id)
+    public async Task<IActionResult> Get(int id)
     {
         return await _entity.Get(_context, id);
     }

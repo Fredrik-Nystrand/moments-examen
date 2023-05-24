@@ -1,0 +1,8 @@
+.shadow {
+  background: linear-gradient(
+    360deg,
+    rgba(32, 34, 38, 1) 0%,
+    rgba(32, 34, 38, 1) 60%,
+    rgba(32, 34, 38, 0) 100%
+  );
+}

@@ -10,4 +10,7 @@ public class UserResponse
     public int Xp { get; set; }
     public int Currency { get; set; }
     public int Level { get; set; }
+    public int XpThisMonth { get; set; }
+    public int XpLastMonth { get; set;}
+    public int XpToday { get; set; }
 }

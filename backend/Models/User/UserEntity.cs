@@ -120,6 +120,9 @@ public class UserEntity
                 return new BadRequestObjectResult("could not find the user");
             }
 
+            var _xpHandler = new XpHandler();
+            var _calculatedXp = await _xpHandler.CalculateXpValues(context, _entity.Id);
+
             UserResponse _response = new()
             {
                 Id = _entity.Id,
@@ -128,7 +131,10 @@ public class UserEntity
                 Email = _entity.Email,
                 Xp = _entity.Xp,
                 Currency = _entity.Currency,
-                Level = _entity.Level
+                Level = _entity.Level,
+                XpToday = _calculatedXp.XpToday,
+                XpLastMonth = _calculatedXp.XpLastMonth,
+                XpThisMonth = _calculatedXp.XpThisMonth,
 
             };
 
@@ -158,7 +164,11 @@ public class UserEntity
                 return new BadRequestObjectResult("wrong password");
             }
 
+
             string _fullName = $"{_entity.Firstname} {_entity.Lastname}";
+
+            var _xpHandler = new XpHandler();
+            var _calculatedXp = await _xpHandler.CalculateXpValues(context, _entity.Id);
 
             UserResponseWithToken _response = new()
             {
@@ -169,7 +179,11 @@ public class UserEntity
                 Xp = _entity.Xp,
                 Currency = _entity.Currency,
                 Level = _entity.Level,
-                Token = new TokenHandler(_fullName, _entity.Email, configuration).Token
+                XpToday = _calculatedXp.XpToday,
+                XpLastMonth = _calculatedXp.XpLastMonth,
+                XpThisMonth = _calculatedXp.XpThisMonth,
+                Token = new TokenHandler(_fullName, _entity.Email, configuration).Token,
+
             };
 
 
@@ -212,6 +226,9 @@ public class UserEntity
             context.Users.Update(_entity);
             await context.SaveChangesAsync();
 
+            var _xpHandler = new XpHandler();
+            var _calculatedXp = await _xpHandler.CalculateXpValues(context, _entity.Id);
+
             UserResponse _response = new()
             {
                 Id = _entity.Id,
@@ -221,6 +238,9 @@ public class UserEntity
                 Xp = _entity.Xp,
                 Currency = _entity.Currency,
                 Level = _entity.Level,
+                XpToday = _calculatedXp.XpToday,
+                XpLastMonth = _calculatedXp.XpLastMonth,
+                XpThisMonth = _calculatedXp.XpThisMonth,
 
             };
 

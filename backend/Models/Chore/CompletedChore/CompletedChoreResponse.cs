@@ -9,5 +9,7 @@
         public string ChoreName { get; set; } = string.Empty;
         public int UserId { get; set; }
         public string UserName { get; set; } = string.Empty;
+        public string? Amount { get; set; } = null;
+        public bool IsTimebased { get; set; } = false;
     }
 }

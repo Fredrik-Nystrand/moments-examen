@@ -10,4 +10,7 @@ public class UserResponseWithToken
     public int Currency { get; set; }
     public int Level { get; set; }
     public string Token { get; set; } = string.Empty;
+    public int XpThisMonth { get; set; }
+    public int XpLastMonth { get; set; }
+    public int XpToday { get; set; }
 }

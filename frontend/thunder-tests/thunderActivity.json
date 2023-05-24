@@ -1,0 +1,67 @@
+[
+  {
+    "_id": "b27c77e0-f680-48c9-922a-dcea1b4d72f4",
+    "colId": "history",
+    "containerId": "",
+    "name": "https://localhost:7152/api/users/login",
+    "url": "https://localhost:7152/api/users/login",
+    "method": "POST",
+    "sortNum": 0,
+    "created": "2023-05-19T14:00:34.364Z",
+    "modified": "2023-05-19T14:00:34.364Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"email\":\"test@mail.com\",\n  \"password\":\"bytmig123\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "77842bf2-497d-45f2-afe1-1334e39bed7b",
+    "colId": "history",
+    "containerId": "",
+    "name": "https://localhost:7152/api/completedchores/create",
+    "url": "https://localhost:7152/api/completedchores/create",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-05-19T14:03:06.880Z",
+    "modified": "2023-05-19T14:03:06.880Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\r\n  \"dateCompleted\": \"2023-05-19 16:02\",\r\n  \"choreId\": 1,\r\n  \"userId\": 1,\r\n  \"amount\": \"\"\r\n}",
+      "form": []
+    },
+    "auth": {
+      "type": "bearer",
+      "bearer": "eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTUxMiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiRnJlZHJpayBOeXN0cmFuZCIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL2VtYWlsYWRkcmVzcyI6InRlc3RAbWFpbC5jb20iLCJleHAiOjE2ODUxMDk2MzZ9.vwJI5jbE57tWTc1RsDXU6qVKhdyjM-kyFEtG9SispjC9xM-fLF3EO_phX1cjpApprWSY9oB18W4FEVz6BdxDrg"
+    },
+    "tests": []
+  },
+  {
+    "_id": "2bb1a979-fbc1-491d-9a77-ebaf77abb1b4",
+    "colId": "history",
+    "containerId": "",
+    "name": "https://localhost:7152/api/completedchores/create",
+    "url": "https://localhost:7152/api/completedchores/create",
+    "method": "POST",
+    "sortNum": 0,
+    "created": "2023-05-19T14:03:14.921Z",
+    "modified": "2023-05-19T14:26:40.682Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\r\n  \"dateCompleted\": \"2023-05-19 16:02\",\r\n  \"choreId\": 4,\r\n  \"userId\": 1,\r\n  \"amount\": \"\"\r\n}",
+      "form": []
+    },
+    "auth": {
+      "type": "bearer",
+      "bearer": "eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTUxMiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiRnJlZHJpayBOeXN0cmFuZCIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL2VtYWlsYWRkcmVzcyI6InRlc3RAbWFpbC5jb20iLCJleHAiOjE2ODUxMDk2MzZ9.vwJI5jbE57tWTc1RsDXU6qVKhdyjM-kyFEtG9SispjC9xM-fLF3EO_phX1cjpApprWSY9oB18W4FEVz6BdxDrg"
+    },
+    "tests": []
+  }
+]

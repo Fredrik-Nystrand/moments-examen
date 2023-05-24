@@ -2,8 +2,9 @@
 
 public class LevelHandler
 {
-    public int Level;
-    public int XpRemainder;
+    public int Level { get; set; }
+    public int XpRemainder { get; set; }
+    public bool LeveledUp { get; set; } = false;
 
     private int _requiredXp = 5000;
 
@@ -16,6 +17,7 @@ public class LevelHandler
     {
         if (currentXp >= _requiredXp)
         {
+            LeveledUp = true;
             Level = currentLevel + 1;
 
             if (currentXp > _requiredXp)
@@ -29,6 +31,7 @@ public class LevelHandler
         }
         else
         {
+            LeveledUp = false;
             XpRemainder = currentXp;
             Level = currentLevel;
 

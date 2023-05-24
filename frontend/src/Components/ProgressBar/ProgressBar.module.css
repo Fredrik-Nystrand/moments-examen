@@ -1,0 +1,15 @@
+.outer {
+  width: 100%;
+  height: 1rem;
+  background: transparent;
+  border-radius: 1rem;
+  overflow: hidden;
+  border: 2px solid white;
+}
+
+.inner {
+  background-color: white;
+  height: 100%;
+  border-radius: 1rem 0 0 1rem;
+  transform: skew(-50deg) scaleX(1.03) scaleY(2) translateX(-2px);
+}
