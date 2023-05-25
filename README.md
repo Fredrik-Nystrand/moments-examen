@@ -7,7 +7,7 @@ Det är bara att starta upp projektet i Visual Studio som vanligt för att start
 Frontend:
 CD:a in till frontend mappen och starta med "npm run dev"
 
-Det finns ett test konto att köra logga in med.
+Det finns ett test konto att logga in med.
 Användarnamn: test@mail.com
 Lösenord: 1234
 
