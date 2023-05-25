@@ -7,9 +7,7 @@ type Props = {
 }
 
 const ProtectedRoute = (props: Props) => {
-  const token: string | undefined = useAppSelector(
-    (state) => state.user.user?.token
-  )
+  const token: string | null = useAppSelector((state) => state.user.user?.token)
 
   const location = useLocation()
 

@@ -26,6 +26,7 @@ public class CompletedChoreEntity
     public virtual UserEntity User { get; set; }
 
 
+
     public async Task<IActionResult> Create(DataContext context, CompletedChoreEntity newEntity, CompletedChoreRequest request)
     {
 

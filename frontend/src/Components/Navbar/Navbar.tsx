@@ -38,7 +38,7 @@ const Navbar = (props: Props) => {
               </div>
               <div className={`divider-h flex flex-1 justify-center`}>
                 <div className={`flex flex-col items-center`}>
-                  <p>{userData.xpToday} XP</p>
+                  <p>{userData.xpToday ? userData.xpToday : 0} XP</p>
                   <p className={`text-xs`}>Idag</p>
                 </div>
               </div>

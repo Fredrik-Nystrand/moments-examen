@@ -45,6 +45,8 @@ public class CompletedChoresController : ControllerBase
         return await _entity.Get(_context, id);
     }
 
+
+
     [HttpGet("{id}")]
     public async Task<IActionResult> GetAllForUser(int id)
     {
