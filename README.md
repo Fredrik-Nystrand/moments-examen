@@ -12,3 +12,7 @@ Användarnamn: test@mail.com
 Lösenord: 1234
 
 Det går inte att registrera ett nytt konto, om du vill göra det får du göra det via swagger eller via postman.
+
+
+Om appsettings av någon anledning inte skulle ha rätt connectionstring så kan du kopiera den nedan:
+Server=tcp:feu21-fn.database.windows.net,1433;Initial Catalog=Moments;Persist Security Info=False;User ID=serveradmin;Password=BytMig123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;
